@@ -8,7 +8,7 @@ from pathlib import Path
 domainlist = []
 from dotenv import load_dotenv
 
-whitelist = ["google.com","bing.com","microsoft.com"] #whitelistdomains here
+whitelist = ["google.com","bing.com","microsoft.com","sendgrid.net","adobe.com","google.co.uk","sharepoint.com"] 
 
 ##Grab API Key######
 load_dotenv("jsb.env")
