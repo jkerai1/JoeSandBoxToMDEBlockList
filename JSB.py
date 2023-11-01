@@ -13,7 +13,7 @@ whitelist = ["google.com","bing.com","microsoft.com","sendgrid.net","adobe.com",
 ##Grab API Key######
 load_dotenv("jsb.env")
 key = os.getenv("API_KEY")
-joe = jbxapi.JoeSandbox(apikey=key)
+joe = jbxapi.JoeSandbox(apikey=key) #You may need accept_tac also
 
 ##BUILD CSV FILE#####
 IOC_Columns = ["IndicatorType","IndicatorValue","ExpirationTime","Action","Severity","Title","Description","RecommendedActions","RbacGroups","Category","MitreTechniques","GenerateAlert"]
