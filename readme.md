@@ -19,3 +19,5 @@ Whitelist is available
 Modify tldextract to extract at different levels I have gone for IOC at highest level which may not make sense  
 
 No duplication checks between runs :) however MDE natively handles duplicates  
+
+Do not blindly upload, validate results before uploading 
