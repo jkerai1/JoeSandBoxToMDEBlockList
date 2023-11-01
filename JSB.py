@@ -26,6 +26,8 @@ if os.path.exists(filename)== False:
         writer.writerow(IOC_Columns)
 
 query = input("what is the string to search in JSB? ")
+if query == "":
+    query = "phish" 
 hashlist = []
 y = joe.analysis_search(query)
 
