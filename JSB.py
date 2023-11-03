@@ -13,7 +13,7 @@ whitelist = ["google.com","bing.com","microsoft.com","sendgrid.net","adobe.com",
 ##Grab API Key######
 load_dotenv("jsb.env")
 key = os.getenv("API_KEY")
-joe = jbxapi.JoeSandbox(apikey=key) #You may need accept_tac also
+joe = jbxapi.JoeSandbox(apikey=key,accept_tac=True)
 
 ##BUILD CSV FILE#####
 IOC_Columns = ["IndicatorType","IndicatorValue","ExpirationTime","Action","Severity","Title","Description","RecommendedActions","RbacGroups","Category","MitreTechniques","GenerateAlert"]
@@ -31,7 +31,7 @@ if query == "":
 hashlist = []
 y = joe.analysis_search(query)
 
-#print(json.dumps(y, sort_keys=True, indent=4, separators=(',', ':'))) use this for analyzing output
+#print(json.dumps(y, sort_keys=True, indent=4, separators=(',', ':'))) #use this for analyzing output
 
 ##Grab URLs
 for z in y:
