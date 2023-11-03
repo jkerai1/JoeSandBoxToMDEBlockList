@@ -38,9 +38,9 @@ for z in y:
     if z['detection'] == "malicious" or z['detection'] == "suspicious":
         domain = tldextract.extract(z["filename"])
         if domain.suffix != "":
-            domainTLD= domain.domain + "." + domain.suffix #Block at highest level where possible,modify as required.
-            if domainTLD not in domainlist and domainTLD not in whitelist:
-                domainlist.append(domainTLD)
+            domainAndTLD= domain.domain + "." + domain.suffix #Block at highest level where possible,modify as required.
+            if domainAndTLD not in domainlist and domainAndTLD not in whitelist:
+                domainlist.append(domainAndTLD)
 
 ##Grab SHA256
 for z in y:
