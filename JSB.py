@@ -42,7 +42,7 @@ for z in y:
                 try:
                     domainlist.append(domainAndTLD.encode('idna').decode('idna')) #Handle Punycode if it comes
                 except:
-                    domainlist.append(domainAndTLD)
+                    print("ERROR: " + domainAndTLD)  #MDE has limited Punycode support and TABL has none.
 for z in y:
     if (z['detection'] == "malicious" or z['detection'] == "suspicious") and z['sha256'] != "":
         hashlist.append(z['sha256'])   
