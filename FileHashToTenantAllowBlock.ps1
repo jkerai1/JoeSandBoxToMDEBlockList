@@ -5,6 +5,6 @@ $csv = Import-CSV 'C:\Users\YOUR PATH\joesandboxiocs+11-03-23.csv'
 foreach($line in $csv){
     if ($line.IndicatorType -eq "FileSha256"){
         $hash = $line.IndicatorValue 
-        New-TenantAllowBlockListItems -ListType FileHash -Block -Entries $hash -NoExpiration
+        New-TenantAllowBlockListItems -ListType FileHash -Block -Entries $hash -NoExpiration -Notes "JSB"
         }
 }
