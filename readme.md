@@ -25,3 +25,6 @@ No duplication checks between runs :) however MDE natively handles duplicates
 Do not blindly upload, validate results before uploading   
 
 TABL does not support punycode (xn--)
+
+# See Also  
+https://github.com/jkerai1/DNSTwistToMDEIOC/tree/main
