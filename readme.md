@@ -22,4 +22,6 @@ Modify tldextract to extract at different levels I have gone for IOC at highest 
 
 No duplication checks between runs :) however MDE natively handles duplicates  
 
-Do not blindly upload, validate results before uploading 
+Do not blindly upload, validate results before uploading   
+
+TABL does not support punycode (xn--)
