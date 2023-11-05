@@ -39,7 +39,10 @@ for z in y:
         if domain.suffix != "":
             domainAndTLD= domain.domain + "." + domain.suffix #Block at highest level where possible,modify as required.
             if domainAndTLD not in domainlist and domainAndTLD not in whitelist:
-                domainlist.append(domainAndTLD)
+                try:
+                    domainlist.append(domainAndTLD.encode('idna').decode('idna')) #Handle Punycode if it comes
+                except:
+                    domainlist.append(domainAndTLD)
 for z in y:
     if (z['detection'] == "malicious" or z['detection'] == "suspicious") and z['sha256'] != "":
         hashlist.append(z['sha256'])   
