@@ -27,8 +27,7 @@ if os.path.exists(filename)== False:
         
 print("Tool Written by Jkerai1 https://github.com/jkerai1\n")
 query = input("what is the string to search in JSB? ") #User Input could be removed and terms could be hardcoded
-if query == "":
-    query = "phish" #Fallback
+if query == "": query = "phish" #Fallback
     
 y = joe.analysis_search(query) #print(json.dumps(y, sort_keys=True, indent=4, separators=(',', ':'))) #use this for analyzing output
 
