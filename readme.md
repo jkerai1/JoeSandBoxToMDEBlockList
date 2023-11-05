@@ -2,6 +2,8 @@
 
 Create a search term to grab IOCs from JSB e.g. "phish" or "malicious" or "malware" or even a TLD like "xyz"  
 
+Results can then be uploaded to tenant Allow Block List. 
+
 Proof of concept, creates a CSV in the same directory as script that can be uploaded to MDE:  
 
 ![image](https://github.com/jkerai1/JoeSandBoxToMDEBlockList/assets/55988027/db91bef8-7537-4aa8-afe2-e28eb6163717)
