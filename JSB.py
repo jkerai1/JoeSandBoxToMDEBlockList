@@ -24,7 +24,8 @@ if os.path.exists(filename)== False:
     with open(filename, 'a+',newline='') as file:
         writer = csv.writer(file)
         writer.writerow(IOC_Columns)
-
+        
+print("Tool Written by Jkerai1 https://github.com/jkerai1\n")
 query = input("what is the string to search in JSB? ") #User Input could be removed and terms could be hardcoded
 if query == "":
     query = "phish" #Fallback
