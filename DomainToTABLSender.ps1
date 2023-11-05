@@ -5,6 +5,6 @@ $csv = Import-CSV 'YOUR PATH/joesandboxiocs+11-03-23.csv'
 foreach($line in $csv){
     if ($line.IndicatorType -eq "DomainName"){
         $url = $line.IndicatorValue 
-        New-TenantAllowBlockListItems -ListType Sender -Block -Entries $url -NoExpiration
+        New-TenantAllowBlockListItems -ListType Sender -Block -Entries $url -NoExpiration -Notes "JSB"
         }
 }
