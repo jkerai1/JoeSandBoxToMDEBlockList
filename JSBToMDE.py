@@ -36,11 +36,8 @@ for z in y:
         domain = tldextract.extract(z["filename"])
         if domain.suffix != "":
             domainAndTLD= domain.domain + "." + domain.suffix #Block at highest level where possible,modify as required.
-            if domainAndTLD not in domainlist and domainAndTLD not in whitelist:
-                try:
-                    domainlist.append(domainAndTLD.encode('idna').decode('idna')) #Handle Punycode if it comes
-                except:
-                    print("ERROR: " + domainAndTLD.encode('idna').decode('idna'))  #MDE has limited Punycode support and TABL has none.
+            if domainAndTLD not in domainlist and domainAndTLD not in whitelist: domainlist.append(domainAndTLD)
+
 for z in y:
     if (z['detection'] == "malicious" or z['detection'] == "suspicious") and z['sha256'] != "":
         hashlist.append(z['sha256'])   
@@ -48,7 +45,10 @@ for z in y:
 with open(filename, 'a',newline='') as file:
     writer = csv.writer(file) #Write To File
     for i in domainlist:
-        writer.writerow(["DomainName",i,"","BlockAndRemediate","","JSB IOC","\nTool written by jkerai1","","","","","FALSE"]) #Fields are generic but could be customized with information from the API Request e.g analysis ID or external reference like VT
+        try:
+            writer.writerow(["DomainName",i.encode('idna').decode('idna'),"","BlockAndRemediate","","JSB IOC","\nTool written by jkerai1","","","","","FALSE"]) #Fields are generic but could be customized with information from the API Request e.g analysis ID or external reference like VT
+        except:
+            print("Error" + i.encode('idna').decode('idna'))
     for i in hashlist: 
         writer.writerow(["FileSha256",i,"","BlockAndRemediate","","JSB IOC","https://www.virustotal.com/gui/file/"+i+ "\nTool written by jkerai1","","","","","FALSE"])
         print("https://www.virustotal.com/gui/file/"+i) #verify hash result with external source
