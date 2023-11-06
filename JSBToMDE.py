@@ -45,7 +45,10 @@ for z in y:
 with open(filename, 'a',newline='') as file:
     writer = csv.writer(file) #Write To File
     for i in domainlist:
-        writer.writerow(["DomainName",i,"","Block","","JSB IOC","Tool written by jkerai1","","","","","FALSE"]) #Fields are generic but could be customized with information from the API Request e.g analysis ID or external reference like VT
+        try: #Attempt to Handle Punycode
+            writer.writerow(["DomainName",i.encode('idna').decode('idna'),"","Block","","JSB IOC","Tool written by jkerai1","","","","","FALSE"]) #Fields are generic but could be customized with information from the API Request e.g analysis ID or external reference like VT
+        except:
+            print("ERROR" + i)
     for i in hashlist: 
         writer.writerow(["FileSha256",i,"","BlockAndRemediate","","JSB IOC","https://www.virustotal.com/gui/file/"+i+ "\nTool written by jkerai1","","","","","FALSE"])
         print("https://www.virustotal.com/gui/file/"+i) #verify hash result with external source
