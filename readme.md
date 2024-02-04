@@ -26,5 +26,7 @@ Do not blindly upload, validate results before uploading
 
 TABL does not support punycode (xn--)
 
-# See Also  
-https://github.com/jkerai1/DNSTwistToMDEIOC/tree/main
+# See also MDE IOC/TABL Repos for 
+DNSTwist: https://github.com/jkerai1/DNSTwistToMDEIOC  
+Ransomwatch: https://github.com/jkerai1/RansomWatchToMDEIoC/
+TLD: https://github.com/jkerai1/TLD-TABL-Block  
