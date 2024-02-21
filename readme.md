@@ -1,3 +1,7 @@
+[![GitHub stars](https://img.shields.io/github/stars/jkerai1/JoeSandBoxToMDEBlockList?style=flat-square)](https://github.com/jkerai1/JoeSandBoxToMDEBlockList/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/jkerai1/JoeSandBoxToMDEBlockList?style=flat-square)](https://github.com/jkerai1/JoeSandBoxToMDEBlockList/network)
+[![GitHub issues](https://img.shields.io/github/issues/jkerai1/JoeSandBoxToMDEBlockList?style=flat-square)](https://github.com/jkerai1/JoeSandBoxToMDEBlockList/issues)
+[![GitHub pulls](https://img.shields.io/github/issues-pr/jkerai1/JoeSandBoxToMDEBlockList?style=flat-square)](https://github.com/jkerai1/JoeSandBoxToMDEBlockList/pulls)
 ## Joe Sandbox to MDE BlockList ###
 
 Create a search term to grab IOCs from JSB e.g. "phish" or "malicious" or "malware" or even a TLD like "xyz"  
