@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 
 domainlist = []
 hashlist = []
-whitelist = ["google.com","bing.com","microsoft.com","sendgrid.net","adobe.com","google.co.uk","sharepoint.com","rs6.net","mimecast.com","canva.com","targetx.com","canon-europe.com","ipfs.io","scc.com","outlook.com"]
+whitelist = ["google.com","bing.com","microsoft.com","sendgrid.net","adobe.com","google.co.uk","sharepoint.com","rs6.net","mimecast.com","canva.com","targetx.com","canon-europe.com","ipfs.io","scc.com","outlook.com","parkvantage.com","bra2hmail.com","srvtrck.com","app.link","emailmeform.com","docsend.com","resume.io","1drv.ms"]
 
 load_dotenv("jsb.env") #Grab API Key from env
 key = os.getenv("API_KEY")
